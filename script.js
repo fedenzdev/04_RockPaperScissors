@@ -2,7 +2,7 @@ function start() {
     let player = prompt("choose your option", "rock");
     document.getElementById("first").innerHTML = "Your option is: " + player;   
 }
-let computersChoice = 0;  
+let computersChoice
 
 function computer() {
     let random = Math.floor(Math.random()*3+1);
@@ -15,6 +15,6 @@ function computer() {
     if (random === 3) {
         computersChoice = "scissors";
     }
-    document.getElementById("second").innerHTML = "Computers choice is: " + computersChoice;
+    document.getElementById("second").innerHTML = computersChoice;
 }
-console.log(random, computersChoice)
+
