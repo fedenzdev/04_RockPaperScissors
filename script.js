@@ -1,8 +1,10 @@
+let player
+let computersChoice
+
 function start() {
-    let player = prompt("choose your option", "rock");
+    player = prompt("choose your option", "rock");
     document.getElementById("first").innerHTML = "Your option is: " + player;   
 }
-let computersChoice
 
 function computer() {
     let random = Math.floor(Math.random()*3+1);
@@ -16,5 +18,18 @@ function computer() {
         computersChoice = "scissors";
     }
     document.getElementById("computerA").innerHTML = "Computers choice is: " + computersChoice;
+
+    getResult()
 }
 
+function getResult () {
+    if ( player === computersChoice) {
+        document.getElementById("result").innerHTML = "Its a tie";
+    }
+    if ( player === "rock" && computersChoice === "paper") {
+        document.getElementById("result").innerHTML = "Computer Won";
+    }
+    if ( player === "rock" && computersChoice === "scissors") {
+        document.getElementById("result").innerHTML = "Player Won";
+    }
+}
