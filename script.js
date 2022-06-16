@@ -15,6 +15,6 @@ function computer() {
     if (random === 3) {
         computersChoice = "scissors";
     }
-    document.getElementById("second").innerHTML = computersChoice;
+    document.getElementById("computerA").innerHTML = "Computers choice is: " + computersChoice;
 }
 
