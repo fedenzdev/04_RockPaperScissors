@@ -1,11 +1,13 @@
 let player
 let computersChoice
 
+// Player's Selection
+document.getElementById("playersBtn").addEventListener('click', start);
 function start() {
-    player = prompt("choose your option", "rock");
-    document.getElementById("first").innerHTML = "Your option is: " + player;   
+    document.getElementById("first").innerHTML = "Your option is: "
 }
 
+// Computer's Selection
 function computer() {
     let random = Math.floor(Math.random()*3+1);
     if (random === 1) {
@@ -33,3 +35,15 @@ function getResult () {
         document.getElementById("result").innerHTML = "Player Won";
     }
 }
+
+/* <h2>JavaScript addEventListener()</h2>
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+<button id="myBtn">Try it</button>
+<p id="demo"></p>
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script> */
+
